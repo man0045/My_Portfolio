@@ -23,7 +23,7 @@ export const Achievements = () => {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className="Achievements" id="Achievements">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -36,8 +36,8 @@ export const Achievements = () => {
               </p>
                 <div className="item">
                       
-                  <h5>● Solved over 500 problems of Datastructure and algorithm on leetcode and gfg and codestudio</h5>
-                  <h5>● Second Runnerup in Datathon hackathon organised by pickle.ai on Unstop</h5>
+                  <h5>● Solved over 700 problems of Datastructure and algorithm on leetcode and gfg and codestudio</h5>
+                  <h5>● Second Runnerup in Datathon hackathon organised by pickle.ai at Unstop</h5>
                   <h5>● 2023 hacktoberfest, 4/4 PR request merged among 40,000 contributor</h5>
                   <h5>● 7 pr request merged successfully at github</h5>
                       

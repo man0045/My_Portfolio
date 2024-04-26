@@ -92,7 +92,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Data-Structure", "ML-Enthusiast" ];
+  const toRotate = ["Web Developer", "Data-Structure", "ML-Enthusiast"];
   const period = 2000;
 
   useEffect(() => {
@@ -135,25 +135,25 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Mannu`} <span className="txt-rotate" dataPeriod="750" data-rotate='[ "Web Developer", "Data-Structure", "ML Enthusiast" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am Mannu Chaurasiya, a dedicated undergraduate at ABES Engineering College (2021-2025). With a strong academic record (8 SGPA), I've ventured into impactful projects. I developed a dynamic real estate website using React.js, exhibited web prowess, and created a fake news detection system, emphasizing data credibility. Venturing into healthcare tech, I designed a predictive model for multiple diseases. Noteworthy is my iNotebook application, a MERN stack project showcasing full-stack proficiency. Eager to contribute to the dynamic tech landscape, I look forward to innovative challenges.
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{`Hi! I'm Mannu`} <span className="txt-rotate" dataPeriod="750" data-rotate='[ "Web Developer", "Data-Structure", "ML Enthusiast" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>I am Mannu Chaurasiya, a dedicated undergraduate at ABES Engineering College (2021-2025). With a strong academic record (8 SGPA), I've ventured into impactful projects. I developed a dynamic real estate website using React.js, exhibited web process, and created a Text-O-Oper system, emphasizing data credibility, in which you can perform text operations. Venturing into inventory management , I created A book store using MERN stack.  MERN stack project showcasing full-stack proficiency. I'm Eager to contribute to the dynamic tech landscape, I look forward to innovative challenges.
 
-Best regards,
-Mannu Chaurasiya</p>
+                    Best regards,
+                    Mannu Chaurasiya</p>
                   <button onClick={() => console.log('connect')} style={{ color: 'white', textDecoration: 'none', background: 'none', border: 'none' }}> <a href="https://www.linkedin.com/in/mannu-chaurasiya-15793a23a/" style={{ color: 'white', textDecoration: 'none' }}>Let's Connect</a> <ArrowRightCircle size={25} /></button>
-                  
-              </div>}
+
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-          
+
             <TrackVisibility>
               {({ isVisible }) =>
                 <div>
-                  <img src={MyImg} alt="my img" style={{ width: "350px", borderRadius: "20%" , marginTop: '150px'}} />
-                  
+                  <img src={MyImg} alt="my img" style={{ width: "350px", borderRadius: "20%", marginTop: '150px' }} />
+
                 </div>}
             </TrackVisibility>
           </Col>

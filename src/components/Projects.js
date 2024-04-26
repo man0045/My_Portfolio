@@ -15,9 +15,15 @@ import projectSecondImg8 from "../assets/img/3blog.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import rs1 from "../assets/img/RS1.png";
+import rs2image from "../assets/img/rs2.png";
+import rs3image from "../assets/img/rs4.png";
+import rs4image from "../assets/img/rs5.png";
+import rs5image from "../assets/img/rs6.png";
+import rs6image from "../assets/img/footer.png";
 
 // export const ProjectSecond = () => {
-  
+
 // }
 
 export const Projects = () => {
@@ -80,20 +86,44 @@ export const Projects = () => {
       description: "Here imported all the links via api to create your own books",
       imgUrl: projectSecondImg5,
     },
-    // {
-    //   title: "Manage your own books Section",
-    //   description: "Here we create your own links of Api and send it in our Databases",
-    //   imgUrl: projectSecondImg6,
-    // },
-    // {
-    //   title: "Update your Project section ",
-    //   description: "Here we Update our project and to maintain the Books",
-    //   imgUrl: projectSecondImg7,
-    // },
+    
     {
       title: "Blog Section",
       description: "Here we just Gives the review of throgh the blogs",
       imgUrl: projectSecondImg8,
+    },
+
+  ];
+  const RealEstate = [
+    {
+      title: "Front page", 
+      description: "Here it shows out there banner page",
+      imgUrl: rs1,
+    },
+    {
+      title: "Partnership",
+      description: "The partnership with the companies and dealers",
+      imgUrl: rs2image,
+    },
+    {
+      title: "Properties",
+      description: "properties in Best stock of selling prices",
+      imgUrl: rs3image,
+    },
+    {
+      title: "Top Notch properties ",
+      description: "The top notched properties to be best to sell",
+      imgUrl: rs4image,
+    },
+    {
+      title: "OUR VALUES",
+      description: "Here created the Values for client",
+      imgUrl: rs5image,
+    },
+    {
+      title: "The footer",
+      description: "The footer web pages",
+      imgUrl: rs6image,
     },
   ];
 
@@ -110,13 +140,13 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Project-1 Text-O-oper</Nav.Link>
+                        <Nav.Link eventKey="first">Text-O-oper</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Book_Store</Nav.Link>
+                        <Nav.Link eventKey="second">Book-Store</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Real-Estate</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -144,8 +174,25 @@ export const Projects = () => {
                           create the blog on a particular book and can remove his Blog
                           also.
                           <Row>
+                            {
+                              projectSecond.map((project, index) => {
+                                return (
+                                  <ProjectCard
+                                    key={index}
+                                    {...project}
+                                  />
+                                )
+                              })
+                            }
+                          </Row>
+                        </p>
+
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="third">
+                        <p>A real estate frontend project using React can offer dynamic property listings, interactive maps, and streamlined user experiences for buyers and sellers.A real estate frontend project using React can leverage components like property cards, search filters, and responsive design to provide a seamless browsing experience for users, enhancing engagement and conversion rates.
+                        <Row>
                           {
-                            projectSecond.map((project, index) => {
+                            RealEstate.map((project, index) => {
                               return (
                                 <ProjectCard
                                   key={index}
@@ -154,12 +201,8 @@ export const Projects = () => {
                               )
                             })
                           }
-                        </Row>
+                          </Row>
                         </p>
-                        
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

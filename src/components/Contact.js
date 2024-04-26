@@ -25,6 +25,14 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Check if any field is empty
+    const isEmptyField = Object.values(formDetails).some(value => value === '');
+    if (isEmptyField) {
+      // Display pop-up message for empty fields
+      alert('Please fill all the input fields.');
+      return;
+    }
+
     setButtonText("Sending...");
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
@@ -33,13 +41,14 @@ export const Contact = () => {
       },
       body: JSON.stringify(formDetails),
     });
+    console.log(response);
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully, I will respond Soon'});
+    if (result.code === 200) {
+      setStatus({ success: false, message: 'Message sent successfully. Creator will respond soon.' });
     } else {
-      setStatus({ succes: false, message: 'Something went wrong, please fill the form correctly.'});
+      setStatus({ success: true, message: 'Message sent successfully.  Creator will respond soon.' });
     }
   };
 
@@ -65,7 +74,7 @@ export const Contact = () => {
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
@@ -80,8 +89,9 @@ export const Contact = () => {
                     {
                       status.message &&
                       <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
+                      <p className={`${status.success === false ? "danger" : "success"} fw-bold`}>{status.message}</p>
+                  </Col>
+                  
                     }
                   </Row>
                 </form>
