@@ -39,7 +39,7 @@ export const Education = () => {
                       <h5>● R.S.M. SENIOR SECONDARY SCHOOL, Gorakhpur — High School Secured 85.6%. -2019</h5>
                       <h5>● ABES Engineering College, Ghaziabad — Graduation(November 2021- July 2025)
                          Pursuing Bachelor of Technology in Computer Science and
-                         Engineering(DataScience) with average of 8 SGPA till 4th sem.
+                         Engineering(DataScience) with average of 8.1 SGPA till 5th sem.
                       </h5>
                 </div>
 
