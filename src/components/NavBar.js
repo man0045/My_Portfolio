@@ -5,6 +5,8 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/navg.svg';
 import navIcon3 from '../assets/img/navian.svg';
 
+
+
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -59,7 +61,7 @@ export const NavBar = () => {
               </div>
 
               <button>
-              <a href ="https://github.com/man0045/Data_Structure_with_Cpp/blob/master/my%20resume.pdf" attributes-list style={{ color: 'gray', textDecoration: 'none' }}> My Resume </a>
+              <a href="\src\assets\img\Mannu-Res.pdf" download="w3logo" attributes-list style={{ color: 'gray', textDecoration: 'none' }}> My Resume </a>
       
               </button>
 
